@@ -1,0 +1,6 @@
+#ifndef RAYCASTING_H_INCLUDED
+#define RAYCASTING_H_INCLUDED
+
+void print();
+
+#endif // RAYCASTING_H_INCLUDED
