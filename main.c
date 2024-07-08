@@ -1,6 +1,16 @@
-#include <stdio.h> /*prinf and fprintf*/
+/**
+ * File: main.c
+ * Description: This file contains the main function and
+ *              the entry point for the program.
+ * Author: Rodgers Wisdom
+ * Email: trulyhawona@gmail.com
+ * Date: July 8, 2024
+ */
 
-#ifndef _WIN32
+
+#include <stdio.h> /* printf and fprintf*/
+
+#ifdef _WIN32
 #include <SDL/SDL.h> /*Windows Specific Library*/
 #else
 #include <SDL2/SDL.h> /* MacOS and GNU/Linux Specific Library*/
@@ -23,14 +33,14 @@ int main( int argc, char **argv)
     /* Initialize SDL video subsystems
      * Returns 0 on success or a negative number on Error
     */
-    if (SDL_Init( SDL_INIT_VIDEO) != 0))
+    if (SDL_Init( SDL_INIT_VIDEO) != 0)
     {
         fprintf( stderr, "SDL failed to initialize: %s\n", SDL_GetError() );
         return (1);
     }
 
     /* Create Window */
-    window = SDL_CreateWindow("The Maze Game"), /* Name of the window*/
+    window = SDL_CreateWindow("The Maze Game", /* Name of the window*/
                             SDL_WINDOWPOS_UNDEFINED, /* Position x of the window*/
                             SDL_WINDOWPOS_UNDEFINED, /* Position y of the window */
                             HEIGHT, /* Height of the window in pixels*/
@@ -49,7 +59,7 @@ int main( int argc, char **argv)
     SDL_Delay( DELAY );
 
     /* Free space occupied by window */
-    SDL_DestroyWindow();
+    SDL_DestroyWindow( window );
 
     /* Shut down all SDL Sub Systems */
     SDL_Quit();
