@@ -17,14 +17,12 @@
 int main( int argc, char **argv)
 {
     /* Initialize data*/
-
     SDL_Window *window = NULL;
     SDL_Surface *screenSurface = NULL;
 
     /* Initialize SDL video subsystems
      * Returns 0 on success or a negative number on Error
     */
-
     if (SDL_Init( SDL_INIT_VIDEO) != 0))
     {
         fprintf( stderr, "SDL failed to initialize: %s\n", SDL_GetError() );
@@ -32,7 +30,6 @@ int main( int argc, char **argv)
     }
 
     /* Create Window */
-
     window = SDL_CreateWindow("The Maze Game"), /* Name of the window*/
                             SDL_WINDOWPOS_UNDEFINED, /* Position x of the window*/
                             SDL_WINDOWPOS_UNDEFINED, /* Position y of the window */
@@ -40,6 +37,22 @@ int main( int argc, char **argv)
                             WIDTH,  /* Width of the window in pixels*/
                             SDL_WINDOW_SHOWN); /* flag to make sure window is shown on creation*/
 
+
+    /* Check if window has been created */
+    if (window == NULL)
+    {
+        fprintf( stderr, "SDL Window failed to initialize: %s\n", SDL_GetError() );
+        return (1);
+    }
+
+    /* Pause activity for 5000 milliseconds */
+    SDL_Delay( DELAY );
+
+    /* Free space occupied by window */
+    SDL_DestroyWindow();
+
+    /* Shut down all SDL Sub Systems */
+    SDL_Quit();
 
     return (0);
 }
