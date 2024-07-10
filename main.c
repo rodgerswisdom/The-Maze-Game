@@ -7,9 +7,6 @@
  * Date: July 8, 2024
  */
 
-
-
-
 #include <stdio.h> /* printf and fprintf*/
 
 #ifdef _WIN32
