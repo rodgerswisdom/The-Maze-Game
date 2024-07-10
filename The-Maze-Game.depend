@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1720567057 source:/home/trulyhawona/Projects/ALX/The-Maze-Game/main.c
+	"headers.h"
+
+1720567490 /home/trulyhawona/Projects/ALX/The-Maze-Game/headers.h
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<math.h>
+

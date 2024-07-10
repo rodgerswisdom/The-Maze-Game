@@ -35,7 +35,10 @@
 		<Linker>
 			<Add option="`sdl2-config --libs`" />
 		</Linker>
-		<Unit filename="main.cpp" />
+		<Unit filename="main.c">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="raycasting.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
